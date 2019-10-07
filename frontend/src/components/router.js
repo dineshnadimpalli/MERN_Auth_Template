@@ -6,6 +6,7 @@ import Login from "../components/auth/Login";
 import PrivateRoute from "../components/private-route";
 import Dashboard from "../components/dashboard/Dashboard";
 import PublicRoute from "../components/public-route";
+import PageNotFound from "./pageNotFound";
 
 const Routes = () => {
     return (
@@ -14,6 +15,7 @@ const Routes = () => {
             <PublicRoute exact path="/register" component={Register} />
             <PublicRoute exact path="/login" component={Login} />
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <PublicRoute component={PageNotFound}/>
         </Switch>
     )
 }
